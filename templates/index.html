@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Form</title>
+</head>
+<body>
+    <h2>Answer the following Questions:</h2>
+    <form action="/submit" method="POST">
+        <p>1. What are your religious beliefs?</p>
+        <input type="radio" name="q1" value="4"> I'm a God fearing individual <img src="{{ url_for('static', filename='images/buddhist_cobson.png') }}" height="100"><br>
+        <input type="radio" name="q1" value="3"> I heckin love soyince! <img src="{{ url_for('static', filename='images/soyince.png') }}" height="100"><br>
+        <input type="radio" name="q1" value="0"> I heckin hate God <img src="{{ url_for('static', filename='images/satanist.png') }}" height="100"><br>
+        <input type="radio" name="q1" value="3"> I don't care <img src="{{ url_for('static', filename='images/soyjack_sipping.png') }}" height="100"><br><br>
+
+        <p>2. How would you describe yourself?</p>
+        <input type="radio" name="q2" value="4"> nerd <img src="{{ url_for('static', filename='images/nerd.png') }}" height="100"><br>
+        <input type="radio" name="q2" value="3"> gamer <img src="{{ url_for('static', filename='images/gamer.png') }}" height="100"><br>
+        <input type="radio" name="q2" value="3"> jock <img src="{{ url_for('static', filename='images/jock.png') }}" height="100"><br>
+        <input type="radio" name="q2" value="1"> stoner <img src="{{ url_for('static', filename='images/stoner.png') }}" height="100"><br><br>
+        
+        <p>3. What are your political beliefs?</p>
+        <input type="radio" name="q3" value="1"> right <img src="{{ url_for('static', filename='images/nazi.png') }}" height="100"><br>
+        <input type="radio" name="q3" value="1"> left <img src="{{ url_for('static', filename='images/leftist.png') }}" height="100"><br>
+        <input type="radio" name="q3" value="2"> centrist <img src="{{ url_for('static', filename='images/centrist.png') }}" height="100"><br>
+        <input type="radio" name="q3" value="4"> who gives a shit <img src="{{ url_for('static', filename='images/smug.png') }}" height="100"><br>
+
+        <p>4. What did you identify with as a child?</p>
+        <input type="radio" name="q4" value="4"> dinosaur <img src="{{ url_for('static', filename='images/dinosaurjak.png') }}" height="100"><br>
+        <input type="radio" name="q4" value="4"> transformer <img src="{{ url_for('static', filename='images/transformer.png') }}" height="100"><br>
+        <input type="radio" name="q4" value="4"> samurai <img src="{{ url_for('static', filename='images/samurai.png') }}" height="100"><br>
+        <input type="radio" name="q4" value="0"> ahem.. akschually these things don't exist in the current world <img src="{{ url_for('static', filename='images/smug2.png') }}" height="100"><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

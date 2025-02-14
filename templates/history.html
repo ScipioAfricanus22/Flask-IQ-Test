@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ History</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <h2>IQ Score History</h2>
+    <canvas id="iqChart" width="400" height="200"></canvas>
+
+    <script>
+        var iqScores = {{ iq_history | tojson | safe }};
+        var labels = iqScores.map((_, index) => "Attempt " + (index + 1));
+
+        var ctx = document.getElementById('iqChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'IQ Score',
+                    data: iqScores,
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

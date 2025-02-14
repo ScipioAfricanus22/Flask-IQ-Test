@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Result</title>
+</head>
+<body>
+    <h2>Your IQ Score: {{ iq }}</h2>
+    <h3>Mean IQ of Previous Submissions: {{ mean_iq }}</h3>
+
+    {% if iq < mean_iq %}
+        <p>Your IQ is below the average site user.</p>
+        <img src="{{ url_for('static', filename='images/low_iq.png') }}" width="200">
+    {% else %}
+        <p>Your IQ is above the average site user.</p>
+        <img src="{{ url_for('static', filename='images/high_iq.png') }}" width="200">
+    {% endif %}
+
+    <a href="/">Take Another Test</a> | 
+    <a href="/history">View History</a>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the IQ Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        .start-button {
+            font-size: 24px;
+            padding: 15px 30px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .start-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the IQ Test</h1>
+
+    <img src="{{ url_for('static', filename='images/retard.png') }}" 
+     alt="IQ Test"
+     height="250"
+     width="500">
+
+
+    <a href="/test">
+        <button class="start-button">Click to Start the IQ Test</button>
+    </a>
+</body>
+</html>
